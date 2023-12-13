@@ -9,6 +9,7 @@ function wrapping(gifts) {
             topWrap += "*";
             bottomWrap += "*";
             //console.log("char:", c);
+            //console.log("char:", c);
         });
         topWrap += "*\n*";
         result[i] = "*" + topWrap + gifts[i] + bottomWrap + "*";
@@ -19,4 +20,4 @@ function wrapping(gifts) {
 const gifts = ['cat', 'game', 'socks'];
 const wrapped = wrapping(gifts);
 
-console.log(wrapped);
+console.log(wrapped); 
