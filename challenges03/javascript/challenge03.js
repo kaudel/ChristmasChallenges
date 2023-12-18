@@ -16,7 +16,9 @@ function distributeGifts(packOfGifts, reindeers) {
 
     return result;
 }
-
+/**
+ * 
+ */
 let packOfGifts = ["book", "doll", "ball"];
 let reindeers = ["dasher", "dancer"];
 console.log(distributeGifts(packOfGifts, reindeers));
