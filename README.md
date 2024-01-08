@@ -1,6 +1,11 @@
+https://2022.adventjs.dev/#retos
 Bastian: 1, 7, 18, 6, 10, 15, 5, 20
 Héctor: 2, 9, 19, 4, 12, 17, 23, 16
 Omar: 3, 13, 22, 8, 14, 21, 24, 11
+
+URL for challenges .
+https://github.com/mouredev/retos-programacion-2023/tree/main/Retos
+https://adventofcode.com/2023/day/1
 
 /* *************************************** */
 /* Powershell script to create some empty  */
