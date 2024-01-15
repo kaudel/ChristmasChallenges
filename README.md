@@ -7,6 +7,8 @@ URL for challenges .
 https://github.com/mouredev/retos-programacion-2023/tree/main/Retos
 https://adventofcode.com/2023/day/1
 
+Ulam numbers: https://es.wikipedia.org/wiki/N%C3%BAmeros_de_Ulam
+
 /* *************************************** */
 /* Powershell script to create some empty  */
 /* files on each sub folder in the repo    */
