@@ -8,27 +8,36 @@ volumes:
   sql-server-data:
     driver: local
   sqldata:
-  sqllog:
-  sqlbackup:
+  #sqllog:
+  #sqlbackup:
+  #sqlshared:
 
 services:
-  db:
+  mssql:
+    container_name: mssql-db
     image: mcr.microsoft.com/mssql/server:latest
-    container_name: db-sqlserver
     networks:
       - app-network-public
     restart: always
     environment:
       ACCEPT_EULA: 'Y'
       MSSQL_SA_PASSWORD: 'Password12345'
-      MSSQL_DATA_DIR: '/var/opt/sqlserver/data'
-      MSSQL_LOG_DIR: '/var/opt/sqlserver/log'
-      MSSQL_BACKUP_DIR: '/var/opt/sqlserver/backup'
+      #MSSQL_DATA_DIR: '/var/opt/mssql/data'
+      MSSQL_PID: 'Developer'
+      #MSSQL_TCP_PORT: 1433
     ports:
       - '1433:1433'
     volumes:
       - sql-server-data:/var/opt/mssql/
       - sqldata:/var/opt/sqlserver/data
-      - sqllog:/var/opt/sqlserver/log
-      - sqlbackup:/var/opt/sqlserver/backup
-      - c:/src/docker/shared:/usr/shared
+    #volumes:
+    #  - ./data:/var/opt/mssql/data
+    #  - ./log:/var/opt/mssql/log
+    #  - ./mssql:/var/opt/mssql/
+    #  - ./secrets:/var/opt/mssql/secrets
+    #  - ./sqlbackup:/var/opt/mssql/backup
+    #  - ../docker/shared:/usr/shared
+    #- c:/src/docker/shared/mssql:/var/opt/mssql/
+    #- c:/src/docker/shared/data:/var/opt/sqlserver/data
+    #- c:/src/docker/shared/log:/var/opt/sqlserver/log
+    #- c:/src/docker/shared/backup:/var/opt/sqlserver/backup
